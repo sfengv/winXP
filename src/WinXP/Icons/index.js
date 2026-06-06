@@ -127,14 +127,16 @@ const StyledIcon = styled(Icon)`
     flex-shrink: 1;
   }
   &__img__container {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     filter: ${({ isFocus, displayFocus }) =>
       isFocus && displayFocus ? 'drop-shadow(0 0 blue)' : ''};
   }
   &__img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
     opacity: ${({ isFocus, displayFocus }) =>
       isFocus && displayFocus ? 0.5 : 1};
   }
