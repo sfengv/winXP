@@ -10,6 +10,7 @@ import iePaper from 'assets/windowsIcons/ie-paper.png';
 import ie from 'assets/windowsIcons/ie.png';
 import mine from 'assets/minesweeper/mine-icon.png';
 import error from 'assets/windowsIcons/897(16x16).png';
+import info from 'assets/windowsIcons/view-info.ico';
 import computer from 'assets/windowsIcons/676(16x16).png';
 import computerLarge from 'assets/windowsIcons/676(32x32).png';
 import notepad from 'assets/windowsIcons/327(16x16).png';
@@ -19,6 +20,8 @@ import documentLarge from 'assets/windowsIcons/308(32x32).png';
 import document from 'assets/windowsIcons/308(16x16).png';
 import paintLarge from 'assets/windowsIcons/680(32x32).png';
 import paint from 'assets/windowsIcons/680(16x16).png';
+
+const Credits = props => <ErrorBox {...props} />;
 
 export const defaultAppState = [];
 
@@ -70,6 +73,13 @@ export const defaultIconState = [
     icon: documentLarge,
     title: 'Resume',
     component: Resume,
+    isFocus: false,
+  },
+  {
+    id: 7,
+    icon: info,
+    title: 'Credits',
+    component: Credits,
     isFocus: false,
   },
 ];
@@ -228,6 +238,34 @@ export const appSettings = {
     resizable: true,
     minimized: false,
     maximized: window.innerWidth < 800,
+    multiInstance: false,
+  },
+  Credits: {
+    header: {
+      icon: info,
+      title: 'Credits',
+      buttons: ['close'],
+      noFooterWindow: true,
+    },
+    component: Credits,
+    injectProps: {
+      message:
+        'This app is my personal website :-) ' +
+        'This was forked from https://github.com/ShizukuIchi/winXP on GitHub and all credits go to ShizukuIchi. ' +
+        'I leveraged VS Code and GitHub Copilot to vibe code it to fit my needs.',
+      icon: info,
+    },
+    defaultSize: {
+      width: 380,
+      height: 150,
+    },
+    defaultOffset: {
+      x: window.innerWidth / 2 - 190,
+      y: window.innerHeight / 2 - 75,
+    },
+    resizable: false,
+    minimized: false,
+    maximized: false,
     multiInstance: false,
   },
 };
