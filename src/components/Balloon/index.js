@@ -19,27 +19,7 @@ function Balloon({ startAfter = 3000, duration = 15000 }) {
       clearTimeout(closeTimer);
     };
   }, [startAfter, duration]);
-  return (
-    start && (
-      <Div show={show}>
-        <div className="balloon__container">
-          <button onClick={() => setShow(false)} className="balloon__close" />
-          <div className="balloon__header">
-            <img className="balloon__header__img" src={risk} alt="risk" />
-            <span className="balloon__header__text">
-              Your computer might be at risk
-            </span>
-          </div>
-          <p className="balloon__text__first">
-            Antivirus software might not be installed
-          </p>
-          <p className="balloon__text__second">
-            Click this balloon to fix this problem.
-          </p>
-        </div>
-      </Div>
-    )
-  );
+  return null;
 }
 const fadein = keyframes`
   0% { 

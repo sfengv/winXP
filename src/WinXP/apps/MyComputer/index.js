@@ -335,7 +335,7 @@ function MyComputer({ onClose }) {
             </div>
             <div className="com__content__right__card com__content__right__card--me">
               <div className="com__content__right__card__header">
-                About Me :)
+                About Me : )
               </div>
               <div className="com__content__right__card__content">
                 <a
