@@ -216,6 +216,10 @@ function WinXP() {
     dispatch({ type: FOCUS_ICON, payload: id });
   }
   function onDoubleClickIcon(component) {
+    if (component && component.url) {
+      window.open(component.url, '_blank', 'noopener,noreferrer');
+      return;
+    }
     const appSetting = Object.values(appSettings).find(
       setting => setting.component === component,
     );

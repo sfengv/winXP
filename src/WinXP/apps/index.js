@@ -20,8 +20,12 @@ import documentLarge from 'assets/windowsIcons/308(32x32).png';
 import document from 'assets/windowsIcons/308(16x16).png';
 import paintLarge from 'assets/windowsIcons/680(32x32).png';
 import paint from 'assets/windowsIcons/680(16x16).png';
+import githubLogo from 'assets/github-logo.png';
 
 const Credits = props => <ErrorBox {...props} />;
+
+const GitHub = () => null;
+GitHub.url = 'https://github.com/sfengv';
 
 export const defaultAppState = [];
 
@@ -80,6 +84,13 @@ export const defaultIconState = [
     icon: info,
     title: 'Credits',
     component: Credits,
+    isFocus: false,
+  },
+  {
+    id: 8,
+    icon: githubLogo,
+    title: 'GitHub',
+    component: GitHub,
     isFocus: false,
   },
 ];
