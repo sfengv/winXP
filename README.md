@@ -1,3 +1,6 @@
+# Credits
+Forked from https://github.com/ShizukuIchi/winXP and all credits to ShizukuIchi. Leveraged GitHub Copilot to vibe code and made changes to fit my needs like adding my resume.
+
 # WinXP
 
 🏁 Web based Windows XP desktop recreation.
